@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tes Koran</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Heading -->
+  <h1 id="app-title">Tes Koran</h1>
+
+  <!-- Layer Pilih Waktu -->
+  <div class="container" id="layer1">
+    <h2 data-id="select-time">Pilih Waktu</h2>
+    <button class="btn" onclick="startCountdown(30)">30 Detik</button>
+    <button class="btn" onclick="startCountdown(60)">1 Menit</button>
+    <button class="btn" onclick="startCountdown(120)">2 Menit</button>
+    <button class="btn" onclick="startCountdown(300)">5 Menit</button>
+    <button class="btn" onclick="startCountdown(600)">10 Menit</button>
+    <button class="btn" onclick="startCountdown(1800)">30 Menit</button>
+    <button class="btn" onclick="startCountdown(3600)">1 Jam</button>
+  </div>
+
+  <!-- Layer Countdown -->
+  <div class="container hidden" id="countdown-container">
+    <h2 data-id="prepare">Persiapan...</h2>
+    <span id="countdown">3</span>
+  </div>
+
+  <!-- Layer Tes Koran -->
+  <div class="container hidden" id="quiz-container">
+    <div id="time-left">00:00</div>
+    <div class="question-container">
+      <h2 id="question"></h2>
+    </div>
+    <div class="numpad">
+      <button onclick="submitAnswer(1)">1</button>
+      <button onclick="submitAnswer(2)">2</button>
+      <button onclick="submitAnswer(3)">3</button>
+      <button onclick="submitAnswer(4)">4</button>
+      <button onclick="submitAnswer(5)">5</button>
+      <button onclick="submitAnswer(6)">6</button>
+      <button onclick="submitAnswer(7)">7</button>
+      <button onclick="submitAnswer(8)">8</button>
+      <button onclick="submitAnswer(9)">9</button>
+      <button class="zero-btn" onclick="submitAnswer(0)">0</button>
+    </div>
+  </div>
+
+  <!-- Layer Hasil Tes -->
+  <div class="container hidden" id="result-container">
+    <h2 data-id="result-title">Hasil Tes</h2>
+    <p data-id="correct-total">Total Benar: <span id="correct-count">0</span></p>
+    <p data-id="wrong-total">Total Salah: <span id="wrong-count">0</span></p>
+    <p data-id="total-time">Total Waktu: <span id="total-time">0</span> Detik</p>
+    <p data-id="segment-time">Waktu Per Segment: 15 Detik</p>
+    <div class="chart-container" id="chart-container">
+      <canvas id="resultChart" width="250" height="250"></canvas>
+    </div>
+    <button class="btn" onclick="restartTest()" data-id="retry">Ulangi Tes</button>
+  </div>
+
+  <!-- Tombol Ganti Bahasa -->
+  <div class="language-switch">
+    <button class="btn" onclick="switchLanguage()" id="lang-btn">ID/EN</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
