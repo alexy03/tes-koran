@@ -107,20 +107,3 @@ h1 {
   width: 250px;
   margin: 20px auto;
 }
-
-/* Tombol switch bahasa */
-#lang-switch {
-  position: fixed;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: black;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 30px;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 14px;
-  z-index: 999;
-  border: none;
-}
