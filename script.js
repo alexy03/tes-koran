@@ -40,19 +40,6 @@ const texts = {
     scoreLabel: "Score"
   }
 };
-
-function updateLanguage() {
-  document.getElementById("page-title").innerText = texts[lang].title;
-  document.getElementById("choose-time-label").innerText = texts[lang].chooseTime;
-  document.getElementById("prep-label").innerText = texts[lang].prep;
-  document.getElementById("result-label").innerText = texts[lang].result;
-  document.getElementById("correct-count-label").innerText = texts[lang].correct;
-  document.getElementById("wrong-count-label").innerText = texts[lang].wrong;
-  document.getElementById("total-time-label").innerText = texts[lang].totalTime;
-  document.getElementById("per-segment-label").innerText = texts[lang].perSegment;
-  document.getElementById("retry-btn").innerText = texts[lang].retry;
-}
-
 document.getElementById("lang-switch").addEventListener("click", () => {
   lang = lang === 'id' ? 'en' : 'id';
   document.getElementById("lang-switch").innerText = lang.toUpperCase();
