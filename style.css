@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  background: url('https://i.imgur.com/v0tjJKZ.jpeg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 40px;
+  border-radius: 10px;
+  display: inline-block;
+  margin-top: 50px;
+  position: relative;
+  color: black;
+  min-width: 300px;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 15px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: blue;
+  color: white;
+  margin: 5px;
+}
+
+#countdown {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+
+#time-left {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #333;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.question-container {
+  padding: 10px 5px;
+  margin: 0 auto;
+  max-width: 300px;
+  background: white;
+  color: black;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.numpad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 20px;
+  background: #d3d3d3;
+  border-radius: 10px;
+}
+
+.numpad button {
+  padding: 20px;
+  font-size: 24px;
+  margin: 5px;
+  border: 3px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.numpad button:active {
+  transform: scale(0.9);
+  box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.5);
+}
+
+/* Tombol 0 di bawah angka 8 */
+.numpad button.zero-btn {
+  grid-column: 2;
+}
+
+.chart-container {
+  width: 250px;
+  margin: 20px auto;
+}
+
+/* Tombol switch bahasa */
+#lang-switch {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: black;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  z-index: 999;
+  border: none;
+}
