@@ -1,10 +1,10 @@
-# 🧠 Tes Koran Web App (ID/EN)
+# 🧠 Tes Koran Web App
 
 Ini adalah aplikasi web sederhana berbasis HTML, CSS, dan JavaScript yang digunakan untuk latihan **Tes Koran** – sebuah bentuk tes psikologi yang menguji konsentrasi dan kecepatan berhitung.  
 
 Aplikasi ini dilengkapi dengan:
 - 🎛️ Pemilihan waktu latihan (dari 30 detik sampai 1 jam)
-- 🔢 Latihan penjumlahan acak modulo 10
+- 🔢 Latihan penjumlahan acak angka 1-10
 - 📊 Statistik hasil (grafik line Chart.js)
 - 🌐 Tombol switch bahasa **Indonesia / English**
 
